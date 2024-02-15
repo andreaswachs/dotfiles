@@ -220,23 +220,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Remove after 11th of June 2023
-export DOCTL_TOKEN=dop_v1_cd5ea6519a0d1104d705057d886b437ca702b6aa61a6ce2e2265faeca9426475
-source ~/.doctl.completion.sh
-
-
-export OPENAI_API_KEY=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
-
-#compdef gpt-engineer
-
-_gpt_engineer_completion() {
-  eval $(env _TYPER_COMPLETE_ARGS="${words[1,$CURRENT]}" _GPT_ENGINEER_COMPLETE=complete_zsh gpt-engineer)
-}
-
-compdef _gpt_engineer_completion gpt-engineer
-source <(switcher init zsh)
-#compdef gh
-
 # zsh completion for gh                                   -*- shell-script -*-
 
 __gh_debug()

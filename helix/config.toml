@@ -1,0 +1,37 @@
+theme = "starlight"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal.space]
+f = "file_explorer_in_current_buffer_directory"
+v = "file_picker"
+x = ":toggle whitespace.render all none"
+
+[editor.lsp]
+# Automatically show signature help (parameter hints) when typing '(' or ','
+auto-signature-help = true
+display-signature-help-docs = true
+display-progress-messages = true
+
+# Show inlay hints (like parameter names and types) from the LSP
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+# or control each character
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)

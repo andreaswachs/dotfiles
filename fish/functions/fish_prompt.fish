@@ -43,7 +43,7 @@ function fish_prompt --description 'Write out the prompt'
     # toml-cli set ~/.config/alacritty/alacritty.toml window.title "$(fortune -n 80 | tr '\n' ' ')" > /dev/null 2>&1 &
 
     if ls | grep -E ".*\.tf\$" >/dev/null
-        echo -n -s $purple '😈 ' (terraform workspace show || echo "no workspace selected") $normal
+        echo -n -s $purple '😈 ' (tofu workspace show || echo "no workspace selected") $normal
     end
 
     # Check to see if the $AWS_VAULT is non-empty
